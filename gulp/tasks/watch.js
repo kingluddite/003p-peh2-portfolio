@@ -1,11 +1,10 @@
-const gulp = require('gulp');
-const watch = require('gulp-watch');
-const browserSync = require('browser-sync').create();
+/* eslint import/no-extraneous-dependencies: ["error", {"optionalDependencies": false}] */
+import gulp from 'gulp';
+import watch from 'gulp-watch';
+import browserSync from 'browser-sync';
 
-gulp.task('cssInject', ['styles'], () => {
-  return gulp.src('./src/temp/styles/styles.css')
-    .pipe(browserSync.stream());
-});
+gulp.task('cssInject', ['styles'], () => gulp.src('./src/temp/styles/styles.css')
+    .pipe(browserSync.stream()));
 
 gulp.task('watch', () => {
   browserSync.init({

@@ -1,0 +1,37 @@
+.tool {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 98px;
+  padding: 0 18px 1px 18px;
+
+  @mixin atLarge {
+    margin-bottom: 60px;
+    padding: 0 1.875rem 1px 1.875rem;
+  }
+
+  &__logo {
+    position: relative;
+    top: -80px;
+    border: 6px solid rgba(0,0,0, 0.4);
+    border-radius: 80px;
+    height: 160px;
+    margin: 0 auto -80px auto;
+    overflow: hidden;
+    width: 160px;
+  }
+
+  &__title {
+    color: $mainBlue;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: $mainGreen;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin: 0.25rem 0 1rem 0;
+  }
+}

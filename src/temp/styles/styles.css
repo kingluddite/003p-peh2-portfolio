@@ -601,6 +601,10 @@ a {
     max-width: 976px;
   }
 
+.wrapper--narrow {
+    max-width: 470px;
+  }
+
 .wrapper .wrapper {
     padding: 0;
   }
@@ -738,6 +742,11 @@ a {
 
 .section-title--blue {
     color: #193441;
+  }
+
+.section-title--less-margin {
+    margin-bottom: 1.3rem;
+    margin-top: 0;
   }
 
 .section-title__icon {
@@ -1450,3 +1459,94 @@ Instead edit gulp/templates/sprite.css */
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(255, 255, 255, .94);
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+.modal__inner {
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+    width: 100%;
+  }
+
+.modal__description {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    color: #193441;
+    font-size: 2rem;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+  }
+
+.modal__close:hover {
+      color: #91aa9d;
+      cursor: pointer;
+    }
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons__icon {
+    position: relative;
+
+    background-color: #91aa9d;
+    display: inline-block;
+    height: 72px;
+    margin: 0 5px 5px 5px;
+    width: 33%;
+  }
+
+@media (min-width: 530px) {
+
+.social-icons__icon {
+      margin: 0 5px;
+      width: 72px
+  }
+  }
+
+.social-icons__icon .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: block;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }

@@ -19,13 +19,21 @@
   a {
     background-color: rgba($mainBlue, 0.5);
     color: $white;
+    font-size: 0.8rem;
     font-weight: 300;
     display: block;
-    padding: 12px 1.5rem;
+    padding:24px 1rem;
     text-decoration: none;
 
     @mixin atMedium {
       background-color: transparent;
+      font-size: 1rem;
+      padding:12px 1.5rem;
+
+      &.is-current-link {
+        color: #faab69;
+        text-transform: uppercase;
+      }
     }
   }
 }

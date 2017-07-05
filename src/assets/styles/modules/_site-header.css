@@ -1,7 +1,6 @@
 .site-header {
   position: absolute;
 
-  height: 127px;
   padding: 10px 0;
   transition: background-color 0.3s ease-out;
   width: 100%;
@@ -12,7 +11,13 @@
   }
 
   @mixin atMedium {
-    background-color: rgba($mainBlue, 1.0);
+    position: fixed;
+
+    /*background-color: rgba($mainBlue, 1.0);*/
+
+    &--dark {
+      background-color: rgba(23, 51, 72, 1.0);
+    }
   }
 
   &__btn-container {
@@ -26,14 +31,19 @@
     top: 0;
     left: 50%;
 
-    background-color: $mainBlue;
+    /*background-color: $mainBlue;*/
     padding: 25px 36px;
     transform: translateX(-50%) scale(0.8);
     transform-origin: 50% 0;
+    transition: transform 0.3s ease-out;
 
     @mixin atMedium {
       left: auto;
       transform: translateX(0) scale(1);
+
+      .site-header--dark & {
+        transform: scale(0.57);
+      }
     }
   }
 

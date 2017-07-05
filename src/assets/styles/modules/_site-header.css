@@ -1,6 +1,7 @@
 .site-header {
   position: absolute;
 
+  height: 127px;
   padding: 10px 0;
   transition: background-color 0.3s ease-out;
   width: 100%;
@@ -35,6 +36,50 @@
       transform: translateX(0) scale(1);
     }
   }
+
+  /* logo inspired by Nathan Stilwell Codepen
+    https://codepen.io/nathanstilwell/pen/DHGBp
+  */
+  &__logo__container {
+    display: table;
+    height: 100%;
+  }
+
+  &__logo__content {
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &__logo__key {
+    background-color: white;
+      border: 4.5px solid #222;
+      border-radius: 30px;
+      box-shadow:
+       -1px 1px 0 black,
+        -2px 2px 0 black,
+        -3px 3px 0 black,
+        -4px 4px 0 black,
+        -5px 5px 0 black,
+        -6px 6px 0 black,
+        /*-7px 7px 0 black,
+        -8px 8px 0 black,
+        -9px 9px 0 black,
+        -10px 10px 0 black,
+        -11px 11px 0 black,*/
+        /*-12px 12px 0 black,*/
+          -4px 2px 3px rgba(0, 0, 0, 0.45);
+      color: black;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "American Typewriter", monospace;
+      font-size: 50px;
+      height: 65px;
+      line-height: 52px;
+      position: relative;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      width: 70px;
+    }
 
   &__logo__graphic {
     text-indent: -9999px;

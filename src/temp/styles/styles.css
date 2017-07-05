@@ -489,8 +489,8 @@ a {
   }
 
 .large-hero {
-  border-bottom: 10px solid #193441;
   position: relative;
+  border-bottom: 10px solid #193441;
 
 }
 
@@ -500,13 +500,11 @@ a {
 
 .large-hero__text-content {
     position: absolute;
-    top: 50%;
+    top: 120px;
     left: 0;
-
-    padding-top: 88px;
+    background-color: rgba(255,255,255, 0.2);
     text-align: center;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    /*transform: translateY(-55%);*/
     width: 100%;
   }
 
@@ -514,14 +512,16 @@ a {
 
 .large-hero__text-content {
       padding-top: 60px
+      /*transform: translateY(-100%);*/
   }
   }
 
 .large-hero__title {
-    color: #193441;
-    font-weight: 300;
+    background-color: #91aa9d;
+    color: #fcfff5;
     font-size: 2.4rem;
     margin: 0;
+    padding: 15px;
   }
 
 @media (min-width: 530px) {
@@ -531,11 +531,17 @@ a {
   }
   }
 
+.large-hero__title--important {
+    color: #193441;
+  }
+
 .large-hero__subtitle {
+    background-color: #ffffff;
     color: #193441;
     font-weight: 300;
     font-size: 1.5rem;
     margin: 0;
+    padding: 20px 0;
 
   }
 
@@ -548,13 +554,13 @@ a {
   }
 
 .large-hero__description {
+    background-color: rgba(25,52,65, 0.8);
     color: #fcfff5;
     font-size: 1.875rem; /* 30 / 16 = 1.875rem */
     font-weight: 100;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-    max-width: 30rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 20px;
   }
 
 .wrapper {
@@ -751,7 +757,7 @@ a {
   }
   }
 
-.feature-item {
+.project-item {
   padding-bottom: 2.5rem;
   position: relative;
 
@@ -760,7 +766,7 @@ a {
   }
 }
 
-.feature-item__icon {
+.project-item__icon {
     display: block;
     margin: 0 auto;
     fill: red;
@@ -768,13 +774,13 @@ a {
 
 @media (min-width: 530px) {
 
-.feature-item__icon {
+.project-item__icon {
       position: absolute;
       left: 0
   }
   }
 
-.feature-item__title {
+.project-item__title {
     font-size: 1.6rem;
     font-weight: 300;
     margin-top: 0.7em;
@@ -784,14 +790,14 @@ a {
 
 @media (min-width: 530px) {
 
-.feature-item__title {
+.project-item__title {
       margin-top: 1em;
       font-size: 1.875rem;
       text-align: left
   }
   }
 
-.feature-item__link {
+.project-item__link {
     color: #ffffff;
     text-decoration: none;
   }
@@ -1116,6 +1122,7 @@ Instead edit gulp/templates/sprite.css */
 .site-header {
   position: absolute;
 
+  height: 127px;
   padding: 10px 0;
   -webkit-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
@@ -1166,6 +1173,68 @@ Instead edit gulp/templates/sprite.css */
               transform: translateX(0) scale(1)
   }
   }
+
+/* logo inspired by Nathan Stilwell Codepen
+    https://codepen.io/nathanstilwell/pen/DHGBp
+  */
+
+.site-header__logo__container {
+    display: table;
+    height: 100%;
+  }
+
+.site-header__logo__content {
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+.site-header__logo__key {
+    background-color: white;
+      border: 4.5px solid #222;
+      border-radius: 30px;
+      -webkit-box-shadow:
+       -1px 1px 0 black,
+        -2px 2px 0 black,
+        -3px 3px 0 black,
+        -4px 4px 0 black,
+        -5px 5px 0 black,
+        -6px 6px 0 black,
+        /*-7px 7px 0 black,
+        -8px 8px 0 black,
+        -9px 9px 0 black,
+        -10px 10px 0 black,
+        -11px 11px 0 black,*/
+        /*-12px 12px 0 black,*/
+          -4px 2px 3px rgba(0, 0, 0, 0.45);
+              box-shadow:
+       -1px 1px 0 black,
+        -2px 2px 0 black,
+        -3px 3px 0 black,
+        -4px 4px 0 black,
+        -5px 5px 0 black,
+        -6px 6px 0 black,
+        /*-7px 7px 0 black,
+        -8px 8px 0 black,
+        -9px 9px 0 black,
+        -10px 10px 0 black,
+        -11px 11px 0 black,*/
+        /*-12px 12px 0 black,*/
+          -4px 2px 3px rgba(0, 0, 0, 0.45);
+      color: black;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "American Typewriter", monospace;
+      font-size: 50px;
+      height: 65px;
+      line-height: 52px;
+      position: relative;
+      -webkit-transition: -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
+      transition: -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
+      width: 70px;
+    }
 
 .site-header__logo__graphic {
     text-indent: -9999px;
@@ -1344,4 +1413,18 @@ Instead edit gulp/templates/sprite.css */
       margin-bottom: 0;
       margin-right: 1.4rem
   }
+  }
+
+.reveal-item {
+  opacity: 0;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: opacity 1.5s ease-out;
+  transition: opacity 1.5s ease-out;
+}
+
+.reveal-item--is-visible {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }

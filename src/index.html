@@ -11,9 +11,12 @@
 <body>
   <header class="site-header">
     <div class="wrapper">
-      <div class="site-header__logo">
-        <div class="icon icon--clear-view-escapes site-header__logo__graphic section-title__icon">
-          Clear View Escapes
+      <div class="site-header__logo site-header__logo__container">
+        <div class="site-header__logo__content">
+          <a class="site-header__logo__key">P</a>
+          <a class="site-header__logo__key">E</a>
+          <a class="site-header__logo__key">H</a>
+          <a class="site-header__logo__key">2</a>
         </div><!-- /.icon icon--clear-view-escapes section-title__icon -->
       </div><!-- /.site-header__logo -->
 
@@ -41,17 +44,16 @@
 
   <div class="large-hero">
     <picture>
-      <source srcset="assets/images/typwriter-cartridge-hero--large-1271x1148.png" media="(min-width: 1270px)" />
-      <source srcset="assets/images/typwriter-cartridge-hero--medium-1024x925.png" media="(min-width: 1024px)" />
-      <source srcset="assets/images/typwriter-cartridge-hero--small-768x694.png" media="(min-width: 768px)" />
-      <img class="large-hero__image" src="assets/images/typwriter-cartridge-hero--smaller-150x150.png" alt="Typewriter cartridge" />
-    </picture>
+          <source srcset="assets/images/typewriter/hero--large.jpg 1920w" media="(min-width: 1380px)" />
+          <source srcset="assets/images/typewriter/hero--medium.jpg 1380w" media="(min-width: 990px)" />
+          <source srcset="assets/images/typewriter/hero--small.jpg 990w" media="(min-width: 640px)" />
+          <img class="large-hero__image" srcset="assets/images/typewriter/hero--smaller.jpg 640w" alt="Abstract part of typewriter" />
+        </picture>
     <div class="large-hero__text-content">
       <div class="wrapper">
-        <h1 class="large-hero__title">PEH2</h1>
+        <h1 class="large-hero__title">PEH2 <strong class="large-hero__title--important">Portfolio</strong></h1>
         <h2 class="large-hero__subtitle">Web Developer</h2>
-        <p class="large-hero__description">I enjoy teaching and learning all things that fall under the purview of <strong>web stuff</strong></p>
-        <p><a href="#" class="btn btn--lime btn--large">Reach Out</a></p>
+        <p class="large-hero__description">I enjoy teaching and learning all things <strong>web</strong></p>
       </div><!-- /.wrapper -->
     </div><!-- /.large-hero__text-content -->
   </div>
@@ -59,16 +61,17 @@
   <div id="about" class="page-section">
     <div class="wrapper">
       <h2 class="headline headline--centered headline--light headline--bottom-margin-small">Modern Web Site <strong>Development</strong></h2>
-      <h3 class="headline headline--centered headline--green headline--small headline--narrow headline--light headline--bottom-margin-large">Using modern tools to experiment and deliver an optimized, efficient web site showcasing my work and my passion for writing <strong>clean</strong>, semantic <strong>code</strong></h3>
+      <h3 class="headline headline--centered headline--green headline--small headline--narrow headline--light headline--bottom-margin-large">Wielding <strong>modern tools</strong> to deliver a <strong>clean design</strong> using <strong>optimized assets</strong> and <strong>semantic</strong> code</h3>
       <div class="wrapper wrapper-medium wrapper--b-margin">
         <img src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
       </div><!-- /.wrapper -->
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
           <picture>
-            <source srcset="assets/images/our-start.jpg" media="(min-width: 1020px)" />
-            <source srcset="assets/images/our-start-portrait.jpg" media="(min-width: 800px)" />
-            <img src="assets/images/our-start-landscape.jpg" alt="Our founder, Jane Doe">
+            <source srcset="assets/images/typewriter/hero--large.jpg 1920w" media="(min-width: 1380px)" />
+            <source srcset="assets/images/typewriter/hero--medium.jpg 1380w" media="(min-width: 990px)" />
+            <source srcset="assets/images/typewriter/hero--small.jpg 990w" media="(min-width: 640px)" />
+            <img class="large-hero__image" srcset="assets/images/typewriter/hero--smaller.jpg 640w" alt="Coastal view of ocean and mountains" />
           </picture>
         </div><!-- /.row__4 -->
         <div class="row__medium-8 row__medium-8--smaller">
@@ -85,49 +88,42 @@
 
   <div id="projects" class="page-section page-section--blue">
     <div class="wrapper">
-
       <h2 class="section-title">
         <span class="icon icon--star section-title__icon"></span>
         My Projects
       </h2>
-
       <div class="row row--gutters-large generic-content-container">
         <div class="row__medium-6">
-          <div class="feature-item">
-            <span class="icon feature-item__icon icon--rain"></span>
-            <h3 class="feature-item__title"><a class="feature-item__link"href="https://kingluddite.com" target="_blank">KingLuddite.com</a></h3>
+          <div class="project-item">
+            <span class="icon project-item__icon icon--rain"></span>
+            <h3 class="project-item__title"><a class="project-item__link"href="https://kingluddite.com" target="_blank">KingLuddite.com</a></h3>
             <p>Personal Blog that I started in 2011 where I share tips and resources with the web community</p>
-          </div><!-- /.feature-item -->
-
-          <div class="feature-item">
-            <span class="icon feature-item__icon icon--globe"></span>
-            <h3 class="feature-item__title">Name In The Happ</h3>
+          </div><!-- /.project-item -->
+          <div class="project-item">
+            <span class="icon project-item__icon icon--globe"></span>
+            <h3 class="project-item__title">Name In The Happ</h3>
             <p>This is a Meteor JS app my class and I built durining a recent JavaScript</p>
-          </div><!-- /.feature-item -->
+          </div><!-- /.project-item -->
         </div><!-- /.row__medium-6 -->
         <div class="row__medium-6">
-          <div class="feature-item">
-            <span class="icon feature-item__icon icon--wifi"></span>
-            <h3 class="feature-item__title">Wi-Fi Waypoints</h3>
+          <div class="project-item">
+            <span class="icon project-item__icon icon--wifi"></span>
+            <h3 class="project-item__title">Wi-Fi Waypoints</h3>
             <p>We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.</p>
-          </div><!-- /.feature-item -->
-          <div class="feature-item">
-            <span class="icon feature-item__icon icon--fire"></span>
-            <h3 class="feature-item__title">Survival Kit</h3>
+          </div><!-- /.project-item -->
+          <div class="project-item">
+            <span class="icon project-item__icon icon--fire"></span>
+            <h3 class="project-item__title">Survival Kit</h3>
             <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow you to setup a tent, start a fire, scratch your own back and lower your taxes.</p>
-          </div><!-- /.feature-item -->
+          </div><!-- /.project-item -->
         </div><!-- /.row__medium-6 -->
       </div><!-- /.row row--gutters -->
-
-
-
     </div><!-- /.wrapper -->
   </div>
 
   <div id="tools" class="page-section page-section--no-b-padding-until-large page-section--tools">
     <div class="wrapper wrapper--no-p-until-large">
         <h2 class="section-title section-title--blue"><img class="section-title__icon" src="assets/images/icons/swiss-army-knife.svg" width="100" height="100">My Modern Web Tools</h2>
-
         <div class="row row--gutters row--gutters-small row--equal-height-medium row--equal-height-large row--t-padding generic-content-container">
           <div class="row__medium-6 row__large-3">
             <div class="tool">
@@ -196,10 +192,6 @@
             </div><!-- /.tool -->
           </div><!-- /.row__large-3 -->
         </div><!-- /.row -->
-
-
-
-
     </div><!-- /.wrapper -->
   </div>
 

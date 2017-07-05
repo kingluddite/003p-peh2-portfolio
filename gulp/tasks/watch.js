@@ -1,10 +1,15 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"optionalDependencies": false}] */
 import gulp from 'gulp';
 import watch from 'gulp-watch';
-import browserSync from 'browser-sync';
+
+const browserSync = require('browser-sync').create();
 
 gulp.task('cssInject', ['styles'], () => gulp.src('./src/temp/styles/styles.css')
     .pipe(browserSync.stream()));
+
+gulp.task('scriptsRefresh', ['scripts'], () => {
+  browserSync.reload();
+});
 
 gulp.task('watch', () => {
   browserSync.init({
@@ -20,5 +25,9 @@ gulp.task('watch', () => {
 
   watch('./src/assets/styles/**/*.css', () => {
     gulp.start('cssInject');
+  });
+
+  watch('./src/assets/scripts/**/*.js', () => {
+    gulp.start('scriptsRefresh');
   });
 });

@@ -1,0 +1,31 @@
+.primary-nav {
+  &--pull-right {
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    @mixin clearfix;
+  }
+
+  li {
+    list-style: none;
+    float: left;
+  }
+
+  a {
+    background-color: rgba($mainBlue, 0.5);
+    color: $white;
+    font-weight: 300;
+    display: block;
+    padding: 12px 1.5rem;
+    text-decoration: none;
+
+    @mixin atMedium {
+      background-color: transparent;
+    }
+  }
+}

@@ -6,9 +6,10 @@ import cssvars from 'postcss-simple-vars';
 import nested from 'postcss-nested';
 import cssImport from 'postcss-import';
 import mixins from 'postcss-mixins';
+import hexrgba from 'postcss-hexrgba';
 
 gulp.task('styles', () => gulp.src('./src/assets/styles/styles.css')
-    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
+    .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
     .on('error', function (error) {
       console.log(error.toString());
       this.emit('end');

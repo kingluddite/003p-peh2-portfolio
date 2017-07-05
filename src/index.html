@@ -9,18 +9,34 @@
   <link rel="stylesheet" href="temp/styles/styles.css" />
 </head>
 <body>
-  <header>
-    <img src="assets/images/icons/clear-view-escapes.svg">
-    <a href="#" class="btn">Get in Touch</a>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#tools">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrapper">
+      <div class="site-header__logo">
+        <div class="icon icon--clear-view-escapes site-header__logo__graphic section-title__icon">
+          Clear View Escapes
+        </div><!-- /.icon icon--clear-view-escapes section-title__icon -->
+      </div><!-- /.site-header__logo -->
+
+      <div class="site-header__menu-icon">
+        <div class="site-header__menu-icon__middle"></div>
+      </div>
+      <!-- /.site-header__menu-icon -->
+
+      <div class="site-header__menu-content">
+        <div class="site-header__btn-container">
+          <a href="#" class="btn">Get in Touch</a>
+        </div><!-- /.site-header__btn-container -->
+        <nav class="primary-nav primary-nav--pull-right">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#tools">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div><!-- /.site-header__menu-content -->
+    </div><!-- /.wrapper -->
   </header>
 
   <div class="large-hero">
@@ -192,5 +208,6 @@
       <p><span class="site-footer__text">Copyright &copy; 2017 PEH2. All rights reserved.</span> <a href="#" class="btn btn--lime">Reach Out</a></p>
     </div><!-- /.wrapper -->
   </footer>
+  <script src="/temp/scripts/App.js"></script>
 </body>
 </html>

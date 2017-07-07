@@ -2,7 +2,7 @@
 import gulp from 'gulp';
 import webpack from 'webpack';
 
-gulp.task('scripts', (callback) => {
+gulp.task('scripts', ['modernizr'], (callback) => {
   // tell webpack where our config file is located
   webpack(require('../../webpack.config.js'), (err, stats) => {
     if (err) {

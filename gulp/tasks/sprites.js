@@ -5,6 +5,11 @@ import rename from 'gulp-rename';
 import del from 'del';
 
 const config = {
+  shape: {
+    spacing: {
+      padding: 1,
+    },
+  },
   mode: {
     css: {
       sprite: 'sprite.svg',

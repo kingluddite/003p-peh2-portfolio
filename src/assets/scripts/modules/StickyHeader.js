@@ -5,7 +5,15 @@ class StickyHeader {
   constructor() {
     this.siteHeader = $('.site-header');
     this.headerTriggerElement = $('.large-hero__title');
+    this.lazyImages = $('.lazyload');
     this.createHeaderWayPoint();
+    this.refreshWaypoints();
+  }
+
+  refreshWaypoints() {
+    this.lazyImages.on('load', () => {
+      Waypoint.refreshAll(); // eslint-disable-line
+    });
   }
 
   createHeaderWayPoint() {

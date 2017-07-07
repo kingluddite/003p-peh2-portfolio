@@ -11282,10 +11282,19 @@ var StickyHeader = function () {
 
     this.siteHeader = (0, _jquery2.default)('.site-header');
     this.headerTriggerElement = (0, _jquery2.default)('.large-hero__title');
+    this.lazyImages = (0, _jquery2.default)('.lazyload');
     this.createHeaderWayPoint();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyHeader, [{
+    key: 'refreshWaypoints',
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.refreshAll(); // eslint-disable-line
+      });
+    }
+  }, {
     key: 'createHeaderWayPoint',
     value: function createHeaderWayPoint() {
       var that = this;
@@ -11357,7 +11366,6 @@ var HighlightSection = function () {
               var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
               that.headerLinks.removeClass('is-current-link');
               (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
-              console.log(matchingHeaderLink);
             }
           },
 

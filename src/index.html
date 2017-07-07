@@ -7,6 +7,7 @@
   <meta name="keywords" content="Web Developer, PHP, WordPress Theme Developer, Meteor JS, NodeJS, MongoDB, HTML5, CSS, PostCSS, Sass, Webpack, Gulp, JavaScript, ES6, Angular, React">
   <meta name="description" content="Web Developer passionate about learning and keeping up to date with modern web technologies">
   <link rel="stylesheet" href="temp/styles/styles.css" />
+  <script src="/temp/scripts/Vendor.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -62,15 +63,15 @@
       <h2 class="headline headline--centered headline--light headline--bottom-margin-small">Modern Web Site <strong>Development</strong></h2>
       <h3 class="headline headline--centered headline--green headline--small headline--narrow headline--light headline--bottom-margin-large">Wielding <strong>modern tools</strong> to deliver a <strong>clean design</strong> using <strong>optimized assets</strong> and <strong>semantic</strong> code</h3>
       <div class="wrapper wrapper-medium wrapper--b-margin">
-        <img src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
+        <img class="lazyload" data-srcset="assets/images/first-trip.jpg" alt="Couple walking down a street.">
       </div><!-- /.wrapper -->
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
           <picture>
-            <source srcset="assets/images/typewriter/hero--large.jpg 1920w" media="(min-width: 1380px)" />
-            <source srcset="assets/images/typewriter/hero--medium.jpg 1380w" media="(min-width: 990px)" />
-            <source srcset="assets/images/typewriter/hero--small.jpg 990w" media="(min-width: 640px)" />
-            <img class="large-hero__image" srcset="assets/images/typewriter/hero--smaller.jpg 640w" alt="Coastal view of ocean and mountains" />
+            <source data-srcset="assets/images/typewriter/hero--large.jpg 1920w" media="(min-width: 1380px)" />
+            <source data-srcset="assets/images/typewriter/hero--medium.jpg 1380w" media="(min-width: 990px)" />
+            <source data-srcset="assets/images/typewriter/hero--small.jpg 990w" media="(min-width: 640px)" />
+            <img class="lazyload large-hero__image" data-srcset="assets/images/typewriter/hero--smaller.jpg 640w" alt="Coastal view of ocean and mountains" />
           </picture>
         </div><!-- /.row__4 -->
         <div class="row__medium-8 row__medium-8--smaller">
@@ -120,21 +121,25 @@
     </div><!-- /.wrapper -->
   </div>
 
-  <div id="tools" class="page-section page-section--no-b-padding-until-large page-section--tools" data-matching-link="#tools-link">
+  <div id="tools" class="page-section page-section--no-b-padding-until-large page-section--tools lazyload" data-matching-link="#tools-link">
     <div class="wrapper wrapper--no-p-until-large">
         <h2 class="section-title section-title--blue"><img class="section-title__icon" src="assets/images/icons/swiss-army-knife.svg" width="100" height="100">My Modern Web Tools</h2>
         <div class="row row--gutters row--gutters-small row--equal-height-medium row--equal-height-large row--t-padding generic-content-container">
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/sass.png" alt="Sass logo">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/sass.png" alt="Sass logo">
+              </div>
               <h3 class="tool__title">Sass</h3>
               <h4 class="tool__subtitle">CSS Preprocessor</h4>
-              <p>Probably the most popular used today. Sass gives you the ability to structure your CSS better, use variables, use functions and mixins. The bottom line is Sass is a powerful way to help you gain control of your CSS and makes writing CSS fun.</p>
+              <p>Probably the most popular used today. <a href="http://sass-lang.com/" target="_blank">Sass</a> gives you the ability to structure your CSS better, use variables, use functions and mixins. The bottom line is Sass is a powerful way to help you gain control of your CSS and makes writing CSS fun.</p>
             </div><!-- /.tool -->
           </div><!-- /.row__large-3 -->
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/postcss.png" alt="PostCSS Logo">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/postcss.png" alt="PostCSS Logo">
+              </div><!-- /.tool__icon -->
               <h3 class="tool__title">PostCSS</h3>
               <h4 class="tool__subtitle">New Cool Kid on the block when working with CSS</h4>
               <p><a href="http://postcss.org/" target="_blank">PostCSS</a> Working with the same principles of preprocessors such as Sass and LESS, it transforms extended syntaxes and features into modern, browser-friendly CSS using JavaScript.</p>
@@ -142,25 +147,31 @@
           </div><!-- /.row__large-3 -->
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/webpack.svg" alt="Webpack Logo">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/webpack.svg" alt="Webpack Logo">
+              </div><!-- /.tool__logo -->
               <h3 class="tool__title">Webpack</h3>
               <h4 class="tool__subtitle">Module Bundler Build Tool</h4>
-              <p>&ldquo;webpack is a module bundler for modern JavaScript applications. When webpack processes your application, it recursively builds a dependency graph that includes every module your application needs, then packages all of those modules into a small number of bundles - often only one - to be loaded by the browser&rdquo;</p>
+              <p>&ldquo;<a href="https://webpack.github.io/" target="_blank">webpack</a> is a module bundler for modern JavaScript applications. When webpack processes your application, it recursively builds a dependency graph that includes every module your application needs, then packages all of those modules into a small number of bundles - often only one - to be loaded by the browser&rdquo;</p>
             </div><!-- /.tool -->
           </div><!-- /.row__large-3 -->
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/git.png" alt="Git Logo">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/git.png" alt="Git Logo">
+              </div><!-- /.tool__logo -->
               <h3 class="tool__title">Git</h3>
               <h4 class="tool__subtitle">Version Control</h4>
-              <p>The most popular version control system on the planet. in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.</p>
+              <p>The most popular version control system on the planet. in <a href="https://git-scm.com/" target="_blank">Git</a>, every developer's working copy of the code is also a repository that can contain the full history of all changes.</p>
             </div><!-- /.tool -->
           </div><!-- /.row__large-3 -->
           </div><!-- /.row -->
           <div class="row row--gutters row--gutters-small row--equal-height-medium row--equal-height-large row--t-padding generic-content-container">
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/gulp.jpg" alt="Gulp Logo">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/gulp.jpg" alt="Gulp Logo">
+              </div><!-- /.tool__logo -->
               <h3 class="tool__title">Gulp</h3>
               <h4 class="tool__subtitle">Build Tool</h4>
               <p><a href="http://gulpjs.com/" target="_blank">Gulp</a> is a build tool that can help you automate a lot of the tasks you need to do as a webdeveloper. Stuff like minifying CSS, JavaScript and images. If you have a task that is repetitive changes are Gulp has a plugin that can do it for you.</p>
@@ -168,15 +179,19 @@
           </div><!-- /.row__large-3 -->
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/babel.png" alt="Babel JS logo">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/babel.png" alt="Babel JS logo">
+              </div><!-- /.tool__logo -->
               <h3 class="tool__title">Babel</h3>
               <h4 class="tool__subtitle">Transpiler</h4>
-              <p>Babel will help turn your modern JavaScript code into older JavaScript. This is great because you can write your code with all the super cool new features and not have to worry about older browsers not supporting it.</p>
+              <p><a href="https://babeljs.io/" target="_blank">Babel</a> will help turn your modern JavaScript code into older JavaScript. This is great because you can write your code with all the super cool new features and not have to worry about older browsers not supporting it.</p>
             </div><!-- /.tool -->
           </div><!-- /.row__large-3 -->
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/iterm.png" alt="iTerm Logo">
+             <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/iterm.png" alt="iTerm Logo">
+             </div><!-- /.tool__logo -->
               <h3 class="tool__title">iTerm</h3>
               <h4 class="tool__subtitle">Terminal/CLI</h4>
               <p><a href="https://www.iterm2.com/" target="_blank">iTerm</a> is one way to use the Terminal. The Terminal is essential in today's modern web world. iTerm is a free program to make the OS version of Terminal a little more fun to use.</p>
@@ -184,13 +199,92 @@
           </div><!-- /.row__large-3 -->
           <div class="row__medium-6 row__large-3">
             <div class="tool">
-              <img class="tool__logo" src="assets/images/tools/nodejs.png" alt="NodeJS Logo">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/nodejs.png" alt="NodeJS Logo">
+              </div><!-- /.tool__logo -->
               <h3 class="tool__title">Node</h3>
               <h4 class="tool__subtitle">JavaScript Runtime</h4>
-              <p>JavaScript Runtime built on Chrome's V8 JavaScript Engine. Node does a lot of incredible stuff but one thing I use it for is server side JavaScript</p>
+              <p>JavaScript Runtime built on Chrome's V8 JavaScript Engine. <a href="https://nodejs.org/en/" target="_blank">Node</a> does a lot of incredible stuff but one thing I use it for is server side JavaScript</p>
             </div><!-- /.tool -->
           </div><!-- /.row__large-3 -->
         </div><!-- /.row -->
+          <div class="row row--gutters row--gutters-small row--equal-height-medium row--equal-height-large row--t-padding generic-content-container">
+          <div class="row__medium-6 row__large-3">
+            <div class="tool">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/meteor.png" alt="Meteor Logo">
+              </div><!-- /.tool__logo -->
+              <h3 class="tool__title">Meteor</h3>
+              <h4 class="tool__subtitle">Build Tool</h4>
+              <p><a href="https://www.meteor.com/" target="_blank">Meteor</a> Meteor is a JavaScript framework to rapidly prototype and build apps</p>
+            </div><!-- /.tool -->
+          </div><!-- /.row__large-3 -->
+          <div class="row__medium-6 row__large-3">
+            <div class="tool">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/mongodb.png" alt="MongoDB logo">
+              </div><!-- /.tool__logo -->
+              <h3 class="tool__title">MongoDB</h3>
+              <h4 class="tool__subtitle">Database</h4>
+              <p><p><a href="https://www.mongodb.com" target="_blank">MongoDB</a> is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.</p>
+            </div><!-- /.tool -->
+          </div><!-- /.row__large-3 -->
+          <div class="row__medium-6 row__large-3">
+            <div class="tool">
+              <div class="tool__logo">
+                <img class="lazyload" data-srcset="assets/images/tools/angularjs.png" alt="AngularJS Logo">
+              </div><!-- /.tool__logo -->
+              <h3 class="tool__title">AngularJS</h3>
+              <h4 class="tool__subtitle">Framework</h4>
+              <p><a href="https://docs.angularjs.org/guide/introduction" target="_blank">AngularJS </a> is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.</p>
+            </div><!-- /.tool -->
+          </div><!-- /.row__large-3 -->
+          <div class="row__medium-6 row__large-3">
+            <div class="tool">
+              <div class="tool__logo">
+                <img class="lazyload" sizes="160px" data-srcset="assets/images/tools/react.png 160w" alt="React Logo">
+              </div>
+              <h3 class="tool__title">React</h3>
+              <h4 class="tool__subtitle">JavaScript Runtime</h4>
+              <p><a href="https://facebook.github.io/react/" target="_blank">React</a> makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
+            </div><!-- /.tool -->
+          </div><!-- /.row__large-3 -->
+        </div><!-- /.row -->
+    </div><!-- /.wrapper -->
+  </div>
+
+  <div id="resources" class="page-section page-section--blue" data-matching-link="#resources-link">
+    <div class="wrapper">
+      <h2 class="section-title">
+        <span class="icon icon--star section-title__icon"></span>
+        My Resources
+      </h2>
+      <div class="row row--gutters-large generic-content-container">
+        <div class="row__medium-6">
+          <div class="project-item">
+            <span class="icon project-item__icon icon--rain"></span>
+            <h3 class="project-item__title"><a class="project-item__link"href="https://kingluddite.com" target="_blank">KingLuddite.com</a></h3>
+            <p>Personal Blog that I started in 2011 where I share tips and resources with the web community</p>
+          </div><!-- /.project-item -->
+          <div class="project-item">
+            <span class="icon project-item__icon icon--globe"></span>
+            <h3 class="project-item__title">Name In The Happ</h3>
+            <p>This is a Meteor JS app my class and I built durining a recent JavaScript</p>
+          </div><!-- /.project-item -->
+        </div><!-- /.row__medium-6 -->
+        <div class="row__medium-6">
+          <div class="project-item">
+            <span class="icon project-item__icon icon--wifi"></span>
+            <h3 class="project-item__title">Wi-Fi Waypoints</h3>
+            <p>We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.</p>
+          </div><!-- /.project-item -->
+          <div class="project-item">
+            <span class="icon project-item__icon icon--fire"></span>
+            <h3 class="project-item__title">Survival Kit</h3>
+            <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow you to setup a tent, start a fire, scratch your own back and lower your taxes.</p>
+          </div><!-- /.project-item -->
+        </div><!-- /.row__medium-6 -->
+      </div><!-- /.row row--gutters -->
     </div><!-- /.wrapper -->
   </div>
 

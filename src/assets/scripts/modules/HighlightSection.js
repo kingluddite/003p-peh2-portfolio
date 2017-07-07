@@ -19,7 +19,6 @@ class HighlightSection {
             const matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
             that.headerLinks.removeClass('is-current-link');
             $(matchingHeaderLink).addClass('is-current-link');
-          console.log(matchingHeaderLink);
           }
         },
         offset: '18%',
